@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useMatch, useResolvedPath } from "react-router-dom";
 import * as AuthServices from '../Services/AuthService';
 import './Navbar.css';
 
@@ -22,6 +22,19 @@ const Navbar = () => {
     }
   }, [])
 
+  function CustomLink({ to, children, ...props }) {
+    const resolvedPath = useResolvedPath(to)
+    const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+  
+    return (
+      <li className={isActive ? "active" : ""}>
+        <Link to={to} {...props}>
+          {children}
+        </Link>
+      </li>
+    )
+  }
+
   return <>
     <nav className="header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top navbar-light navbar-shadow">
       <div className="navbar-wrapper">
@@ -37,31 +50,37 @@ const Navbar = () => {
               </ul>
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <button className="nav-link btn">Home</button>
+                <Link to="/" className="site-title">
+                  Home
+                </Link>
                 </li>
                 <li className="nav-item">
-                  <button className="nav-link btn">About Us</button>
+                  <CustomLink to="/about">About Us</CustomLink>
                 </li>
-                <div className="dropdown">
-                  <button className="nav-link btn">NSW Listings</button>
-                    <div className="dropdown-options">
-                      <a href="#">Sydney North West</a>
-                      <a href="#">Sydney South West</a>
-                      <a href="#">Newcastle</a>
-                      <a href="#">Central Coast</a>
-                      <a href="#">Wollongong</a>
-                    </div>
-                </div>
-                <div className="dropdown">
-                  <button className="nav-link btn">Resources</button>
-                   <div className="dropdown-options">
-                    <a href="#">Mortgage Calculator</a>
-                    <a href="#">Buying and Selling process</a>
-                    <a href="#">Property news</a>
+                <li className="nav-item">
+                  <div className="dropdown">
+                    <CustomLink to="/listing">NSW Listing</CustomLink>
+                     <div className="dropdown-options">
+                        <CustomLink to="/sydneyNW">Sydney North West</CustomLink>
+                        <CustomLink to="/sydneySW">Sydney South West</CustomLink>
+                        <CustomLink to="/newcastle">Newcastle</CustomLink>
+                        <CustomLink to="/centralCoast">Central Coast</CustomLink>
+                        <CustomLink to="/wollongong">Wollongong</CustomLink>
+                      </div>
                   </div>
-                </div>
+                </li>
+                <li className="nav-item">
+                  <div className="dropdown">
+                  <CustomLink to="/resources">Resources</CustomLink>
+                    <div className="dropdown-options">
+                      <CustomLink to="/mortgageCal">Mortgage Calculator</CustomLink>
+                      <CustomLink to="/buyAndSell">Buying and Selling process</CustomLink>
+                      <CustomLink to="/propNew">Property news</CustomLink>
+                    </div>
+                  </div>
+                </li>  
               <li className="nav-item">
-                <button className="nav-link btn">Contact Us</button>
+                <CustomLink to="/contact">Contact Us</CustomLink>
               </li>
             </ul>
             </div>
