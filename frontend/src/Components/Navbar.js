@@ -3,6 +3,7 @@ import { Link, useNavigate, useMatch, useResolvedPath } from "react-router-dom";
 import * as AuthServices from '../Services/AuthService';
 import './Navbar.css';
 
+
 const Navbar = () => {
   const [user, setUser] = useState();
   const navigate = useNavigate();
@@ -49,38 +50,52 @@ const Navbar = () => {
                 </li>
               </ul>
               <ul className="navbar-nav">
+              <li className="nav-item">
+                <form className="form-inline my-2 my-lg-0 custom-search">
+                  <div className="input-group">
+                    <input className="form-control border-secondary py-2" type="search" placeholder="Search" aria-label="Search" />
+                      <div className="input-group-append">
+                        <button className="btn btn-outline-secondary" type="button">
+                          <i className="fa fa-search"></i>
+                        </button>
+                      </div>
+                  </div>
+                </form>
+              </li>
+
+              
                 <li className="nav-item">
-                <Link to="/" className="site-title">
-                  Home
-                </Link>
+                  <Link to="/" className="site-title">
+                    Home
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <CustomLink to="/about">About Us</CustomLink>
+                  <CustomLink to="/">About Us</CustomLink>
                 </li>
                 <li className="nav-item">
                   <div className="dropdown">
-                    <CustomLink to="/listing">NSW Listing</CustomLink>
+                    <CustomLink to="/">NSW Listing</CustomLink>
                      <div className="dropdown-options">
-                        <CustomLink to="/sydneyNW">Sydney North West</CustomLink>
-                        <CustomLink to="/sydneySW">Sydney South West</CustomLink>
-                        <CustomLink to="/newcastle">Newcastle</CustomLink>
-                        <CustomLink to="/centralCoast">Central Coast</CustomLink>
-                        <CustomLink to="/wollongong">Wollongong</CustomLink>
+                        <CustomLink to="/">Sydney North West</CustomLink>
+                        <CustomLink to="/">Sydney South West</CustomLink>
+                        <CustomLink to="/">Newcastle</CustomLink>
+                        <CustomLink to="/">Central Coast</CustomLink>
+                        <CustomLink to="/">Wollongong</CustomLink>
                       </div>
                   </div>
                 </li>
                 <li className="nav-item">
                   <div className="dropdown">
-                  <CustomLink to="/resources">Resources</CustomLink>
+                  <CustomLink to="/">Resources</CustomLink>
                     <div className="dropdown-options">
-                      <CustomLink to="/mortgageCal">Mortgage Calculator</CustomLink>
-                      <CustomLink to="/buyAndSell">Buying and Selling process</CustomLink>
-                      <CustomLink to="/propNew">Property news</CustomLink>
+                      <CustomLink to="/">Mortgage Calculator</CustomLink>
+                      <CustomLink to="/">Buying and Selling process</CustomLink>
+                      <CustomLink to="/">Property news</CustomLink>
                     </div>
                   </div>
                 </li>  
               <li className="nav-item">
-                <CustomLink to="/contact">Contact Us</CustomLink>
+                <CustomLink to="/">Contact Us</CustomLink>
               </li>
             </ul>
             </div>
