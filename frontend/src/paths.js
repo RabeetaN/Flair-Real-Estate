@@ -1,8 +1,5 @@
-<<<<<<< Updated upstream
 import Dashboard from "./Pages/Admin/Dashboard"
-=======
 import Home from "./Components/Home"
->>>>>>> Stashed changes
 import * as Users from "./Pages/Admin/Users"
 import * as Groups from "./Pages/Admin/Groups"
 

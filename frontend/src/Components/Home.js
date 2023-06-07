@@ -9,15 +9,8 @@ const Dashboard = () => {
   }, []);
 
   return (<>
-<<<<<<<< Updated upstream:frontend/src/Pages/Admin/Dashboard.js
     This is Dashboard
     <Link to="/second-level">Select</Link>
-========
-    
-    This is Home Page
-    <Link to="/second-level"> Select</Link>
-  
->>>>>>>> Stashed changes:frontend/src/Components/Home.js
   </>);
 }
 
