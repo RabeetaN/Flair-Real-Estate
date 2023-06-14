@@ -3,7 +3,7 @@ import NavbarUser from "../../../Components/NavbarUser";
 import ContactForm from "../Contact/ContactForm";
 import HomeHero from "../../../Components/HomeHero";
 
-function Contact() {
+const Contact = () => {
   return (
     <>
       <NavbarUser />

@@ -3,7 +3,7 @@ import NavbarUser from "../../../Components/NavbarUser";
 import HomeHero from "../../../Components/HomeHero";
 import HomePage from "../Home/HomePage";
 
-function Home() {
+const Home = () => {
   return (
     <>
       <NavbarUser />

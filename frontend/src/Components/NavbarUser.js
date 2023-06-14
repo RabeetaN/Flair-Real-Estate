@@ -3,19 +3,12 @@ import "./NavbarUser.css";
 import { Link } from "react-router-dom";
 import { MenuItems } from "../paths";
 
-const NavbarUser = () => {
-
-  const navigate = useNavigate();
-
-  const onLogIn = () => {
-    AuthServices.logout();
-    navigate('/auth/login');
-  };
-
+class NavbarUser extends Component {
   state = { clicked: false };
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
+  render() {
     return (
       <nav className="NavbarItems">
         <h1 className="navbar-logo">Real Estate</h1>
@@ -37,13 +30,13 @@ const NavbarUser = () => {
               </li>
             );
           })}
-           <Link
-              onClick={onLogIn}>
-              <button>Log In</button>
-            </Link>
+          <Link to="/auth/login">
+            <button>Log In</button>
+          </Link>
           
         </ul>
       </nav>
     );
+  }
 }
 export default NavbarUser;

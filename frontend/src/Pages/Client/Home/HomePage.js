@@ -1,6 +1,6 @@
 import "./HomePage.css";
 
-function HomePage() {
+const HomePage = () => {
   return (
     <>
       <div className="home-container">

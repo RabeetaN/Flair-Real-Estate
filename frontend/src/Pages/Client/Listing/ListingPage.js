@@ -1,6 +1,6 @@
 import "./ListingPage.css";
 
-function ListingPage() {
+const ListingPage = () => {
   return (
     <>
       <div className="listing-container">

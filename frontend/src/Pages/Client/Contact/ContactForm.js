@@ -1,6 +1,6 @@
 import "./ContactForm.css";
 
-function ContactForm() {
+const ContactForm = () => {
   return (
     <>
       <div className="form-container">

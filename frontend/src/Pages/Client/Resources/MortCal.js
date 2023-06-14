@@ -2,7 +2,7 @@ import Footer from "../../../Components//Footer";
 import Navbar from "../../../Components//Navbar";
 import HomeHero from "../../../Components//HomeHero";
 
-function MortCal() {
+const MortCal = () => {
     return (
       <>
         <Navbar />
