@@ -44,35 +44,6 @@ const Navbar = () => {
                 <li className="nav-item d-none d-lg-block">
                 </li>
               </ul>
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                  <button className="nav-link btn">Home</button>
-                </li>
-                <li className="nav-item">
-                  <button className="nav-link btn">About Us</button>
-                </li>
-                <div className="dropdown">
-                  <button className="nav-link btn">NSW Listings</button>
-                    <div className="dropdown-options">
-                      <a href="#">Sydney North West</a>
-                      <a href="#">Sydney South West</a>
-                      <a href="#">Newcastle</a>
-                      <a href="#">Central Coast</a>
-                      <a href="#">Wollongong</a>
-                    </div>
-                </div>
-                <div className='dropdown'>
-                  <button className='nav-link btn'>Resources</button>
-                  <div className='dropdown-options'>
-                    <a href='#'>Mortgage Calculator</a>
-                    <a href='#'>Buying and Selling process</a>
-                    <a href='#'>Property news</a>
-                  </div>
-                </div>
-                  <li className='nav-item'>
-                    <button className='nav-link btn'>About Us</button>
-                  </li>
-                </ul>
               </div>
               <ul className='nav navbar-nav float-right'>
                 <li className='dropdown dropdown-user nav-item'>
