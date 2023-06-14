@@ -49,14 +49,14 @@ export const getRoutes = (r, parentIndex = 0) => {
 const RenderRouters = () => {
   return (
     <Routes>
+      <Route element={<Client />}>
+        {getRoutes(MenuItems)}
+      </Route>
       <Route element={<Auth />}>
         {getRoutes(AuthViews)}
       </Route>
       <Route element={<Admin />}>
         {getRoutes(views)}
-      </Route>
-      <Route element={<Client />}>
-        {getRoutes(MenuItems)}
       </Route>
       {getRoutes(views)}
     </Routes>

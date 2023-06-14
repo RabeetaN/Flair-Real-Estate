@@ -1,6 +1,6 @@
-import Footer from "../../Components//Footer";
-import Navbar from "../../Components//Navbar";
-import HomeHero from "../../Components//HomeHero";
+import Footer from "../../../Components/Footer";
+import Navbar from "../../../Components/Navbar";
+import HomeHero from "../../../Components/HomeHero";
 
 function PropNews() {
     return (

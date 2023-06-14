@@ -1,5 +1,5 @@
 import React from "react";
-import { ResourceItems } from "../../paths";
+import { ResourceItems } from "../../../paths";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import "./ResourcesPage.css"; 
