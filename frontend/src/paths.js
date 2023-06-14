@@ -321,3 +321,69 @@ export const api = {
     getByDeveloper: '/api/listings/developer/{{id}}',
   }
 }
+
+export const MenuItems = [
+  {
+    title: "Home",
+    url: "/home",
+    cName: "nav-links",
+    icon: "fa-solid fa-house-chimney"
+  },
+  {
+    title: "About Us",
+    url: "/about",
+    cName: "nav-links",
+    icon: "fa-solid fa-address-card"
+  },
+  {
+    title: "NSW Listing",
+    url: "/listing",
+    cName: "nav-links",
+    icon: "fa-solid fa-list"
+  },
+  {
+    title: "Resources",
+    url: "/resources",
+    cName: "nav-links",
+    icon: "fa-brands fa-sourcetree"
+  },
+  {
+    title: "Contact Us",
+    url: "/contact",
+    cName: "nav-links",
+    icon: "fa-solid fa-address-book"
+  },
+  {
+    title: "Login",
+    url: "/login",
+    cName: "nav-links-mobile"
+  }
+];
+
+export const ResourceItems = [
+  {
+    name: "Mortgage Calculator",
+    icon: "fa-solid fa-calculator",
+    cName: "resources-links",
+    url: "/mortCal"
+  },
+  {
+    name: "Buy Process",
+    icon: "fa-solid fa-b",
+    cName: "resources-links",
+    url:"/buy"
+  },
+  {
+    name: "Sell Process",
+    icon: "fa-solid fa-s",
+    cName: "resources-links",
+    url: "/sell"
+  },
+  {
+    name: "Property News",
+    icon: "fa-solid fa-newspaper",
+    cName: "resources-links",
+    url: "/news"
+  }
+];
+

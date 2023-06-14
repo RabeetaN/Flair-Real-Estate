@@ -1,7 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import Admin from './Layouts/Admin';
 import Auth from './Layouts/Auth';
-import { views, AuthViews } from './paths';
+import Client from './Layouts/Client';
+import { views, AuthViews, MenuItems } from './paths';
 
 //get all paths which are defined in paths.js file
 export const getPaths = (r, parentIndex = 0) => {
@@ -53,6 +54,9 @@ const RenderRouters = () => {
       </Route>
       <Route element={<Admin />}>
         {getRoutes(views)}
+      </Route>
+      <Route element={<Client />}>
+        {getRoutes(MenuItems)}
       </Route>
       {getRoutes(views)}
     </Routes>
