@@ -4,6 +4,7 @@ import HomeHero from "../../../Components/HomeHero";
 import HomePage from "../Home/HomePage";
 
 const Home = () => {
+
   return (
     <>
       <NavbarUser />
